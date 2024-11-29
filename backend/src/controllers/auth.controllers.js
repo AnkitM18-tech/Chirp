@@ -26,10 +26,12 @@ export const signUp = async (req, res) => {
 
       return res.status(201).json({
         message: "User created successfully",
-        _id: newUser._id,
-        fullName: newUser.fullName,
-        email: newUser.email,
-        profilePicture: newUser.profilePicture,
+        user: {
+          _id: newUser._id,
+          fullName: newUser.fullName,
+          email: newUser.email,
+          profilePicture: newUser.profilePicture,
+        },
       });
     } else {
       return res.status(400).json({
@@ -62,10 +64,12 @@ export const login = async (req, res) => {
 
     return res.status(200).json({
       message: "User logged in successfully",
-      _id: user._id,
-      fullName: user.fullName,
-      email: user.email,
-      profilePicture: user.profilePicture,
+      user: {
+        _id: user._id,
+        fullName: user.fullName,
+        email: user.email,
+        profilePicture: user.profilePicture,
+      },
     });
   } catch (error) {
     console.log("Error in login controller : ", error);
