@@ -43,7 +43,7 @@ export const sendMessage = async (req, res) => {
     const { id: receiverId } = req.params;
     const senderId = req.user._id;
 
-    if (!text || !image) {
+    if (!text && !image) {
       return res.status(401).json({ message: "No message body to send" });
     }
 
