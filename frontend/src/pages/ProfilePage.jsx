@@ -20,7 +20,7 @@ const ProfilePage = () => {
     };
   };
   return (
-    <div className="pt-20">
+    <div className="py-20">
       <div className="max-w-2xl p-4 py-8 mx-auto">
         <div className="p-6 space-y-8 bg-base-300 rounded-xl">
           <div className="text-center">
