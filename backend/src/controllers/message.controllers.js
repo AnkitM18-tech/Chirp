@@ -68,7 +68,6 @@ export const sendMessage = async (req, res) => {
     //! real-time functinality to be added
 
     return res.status(201).json({
-      message: "Message created",
       message: newMessage,
     });
   } catch (error) {
